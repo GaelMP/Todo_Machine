@@ -93,3 +93,32 @@
     }
   }
 }
+
+@media (max-width:390px) {
+  .TodoItem {
+    background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 1.5px #9e9e9e;
+
+    padding: 5px;
+
+    .Icon-delete {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+  
+      transform: rotate(0);
+      transition: .3s ease;
+    }
+  }
+}

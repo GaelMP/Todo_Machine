@@ -29,3 +29,20 @@
       font-weight: bold;
     }
   }
+
+  @media (max-width:390px ) {
+    .TodoCounter {
+      font-size: 13px;
+      text-align: center;
+      margin: 0;
+      padding: 18px;
+      font-weight: normal; 
+      color: black;
+      cursor: default;
+      text-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    }
+  
+    .TodoCounter span {
+      font-weight: bold;
+    }
+  }

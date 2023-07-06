@@ -41,7 +41,7 @@
     color: #2196f3;
    }
 
-  @media (max-width:320px ) {
+  @media (max-width:390px ) {
     .TodoSearch-group {
       position: relative;
      }
