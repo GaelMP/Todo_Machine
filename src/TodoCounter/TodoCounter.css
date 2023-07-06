@@ -13,7 +13,7 @@
     font-weight: bold;
   }
 
-  @media (max-width:414px) {
+  @media (max-width:414px ) {
     .TodoCounter {
       font-size: 13px;
       text-align: center;
