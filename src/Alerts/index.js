@@ -12,18 +12,18 @@ function Alerts(props) {
 
             {props.error && <h1>😨desesperate huvo un error😨</h1>}
 
-            {props.loading && <div class="loader"></div>}
+            {props.loading && <div className="loader"></div>}
 
             {(!props.loading && !props.searchedTodos.length) && <h1 className="create" onClick={onClickButton}>➕Crea tu primera tarea aquí➕</h1>}
 
-            {(!props.loading && !props.searchedTodos.length) &&     <div class="arrow">  
+            {(!props.loading && !props.searchedTodos.length) &&     <div className="arrow">  
                                                                         <span></span>
                                                                         <span></span>
                                                                         <span></span>
                                                                     </div>      
             }
 
-{(!props.loading && !props.searchedTodos.length) &&     <div class="arrow_2">  
+{(!props.loading && !props.searchedTodos.length) &&     <div className="arrow_2">  
                                                                         <span></span>
                                                                         <span></span>
                                                                         <span></span>

@@ -21,7 +21,8 @@ function AppUI() {
       completeTodos, 
       deleteTodos,
       openModal,
-      setOpenModal
+      setOpenModal,
+      timestamp,
     } = React.useContext(TodoContext)
 
     return (
@@ -41,6 +42,7 @@ function AppUI() {
               <TodoItem
                key={todo.text}
                text={todo.text}
+               timestamp={timestamp}
                completed={todo.completed}
                onComplete={() => completeTodos(todo.text)}
                onDelete={() => deleteTodos(todo.text)}

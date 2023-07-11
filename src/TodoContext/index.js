@@ -1,12 +1,12 @@
 import React from "react";
-import {useLocalStorage} from "./UseLocalStorage";
+import {useLocalStorage} from "../TodoContext/UseLocalStorage";
 
 const TodoContext = React.createContext();
 
 function TodoProvider(props) {
 
     const { 
-          item: todos,
+        item: todos,
         saveItem: saveTodos,
         loading,
         error,
@@ -32,15 +32,24 @@ if (
     })
   }
 
+  const now = new Date();
+  const timestamp = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 1, 0, 0, 0).getTime();
+
   const addTodos = (text) => {
     const newTodos = [...todos];
     newTodos.push({
       completed: false,
       text,
+      timestamp: timestamp,
     })
    saveTodos(newTodos)
 
     };
+
+    // const playSound = () => {
+    //   const audio = new Audio('./');
+    //   audio.play();
+    // }
 
   const completeTodos = (text) => {
     const todoIndex = todos.findIndex(todo => todo.text === text);
@@ -49,6 +58,7 @@ if (
     todos[todoIndex].completed = true;
     saveTodos(newTodos)
 
+    // playSound();
     };
 
     const deleteTodos = (text) => {
@@ -58,7 +68,11 @@ if (
       newTodos.splice(todoIndex, 1)
      saveTodos(newTodos)
 
+      // const audio = new Audio('./sonidos/check-mark-sound-effect.mp3');
+      // audio.play()
       };
+
+
 
     return(
         <TodoContext.Provider value={{
