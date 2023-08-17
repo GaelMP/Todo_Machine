@@ -9,7 +9,7 @@ function TodoForm() {
         setOpenModal
     } = React.useContext(TodoContext)
 
-    const maxLength = 70;
+    const maxLength = 50;
 
     const onChange = (event) => {
         const newText = event.target.value;
