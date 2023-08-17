@@ -9,29 +9,35 @@ function TodoForm() {
         setOpenModal
     } = React.useContext(TodoContext)
 
-    const onChange  = (event) => {
-        setNewTodoValue(event.target.value)
+    const maxLength = 70;
+
+    const onChange = (event) => {
+        const newText = event.target.value;
+
+        if (newText.length <= maxLength) {
+            setNewTodoValue(newText)
+        }
     }
 
     const onCancel = () => {
         setOpenModal(false);
     }
 
-    const onSubmit  = (event) => {
+    const onSubmit = (event) => {
         event.preventDefault();
         addTodos(newTodoValue);
         setOpenModal(false);
     }
 
-
-    return(
+    return (
         <form onSubmit={onSubmit}>
             <label>Crea una nueva tarea aquí!</label>
-            <textarea  
+            <textarea
                 value={newTodoValue}
                 onChange={onChange}
-                placeholder="Ponle nombre a tu tarea aquí"
+                placeholder={`Escribe aquí el nombre de tu Tarea(máximo ${maxLength} caracteres)`}
             />
+            <p>Caracteres restantes: {maxLength - newTodoValue.length}</p>
             <div className="TodoForm-buttonContainer">
                 <button
                     type="button"
@@ -43,7 +49,6 @@ function TodoForm() {
                 <button
                     type="submit"
                     className="TodoForm-button TodoForm-button--add"
-                    onClick={onSubmit}
                 >
                     Añadir
                 </button>

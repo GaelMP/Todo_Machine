@@ -70,3 +70,7 @@ form {
   .TodoForm-button--cancel {
     background: transparent;
   }
+
+p {
+  color: black;
+}

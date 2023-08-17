@@ -194,7 +194,7 @@ animation-delay: -0.4s;
 
   .arrow {
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 50%;
     transform: translate(-100%, -100%);
     transform: rotate(180deg);
