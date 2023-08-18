@@ -9,7 +9,7 @@ function TodoForm() {
         setOpenModal
     } = React.useContext(TodoContext)
 
-    const maxLength = 43;
+    const maxLength = 46;
 
     const onChange = (event) => {
         const newText = event.target.value;
@@ -35,9 +35,8 @@ function TodoForm() {
             <textarea
                 value={newTodoValue}
                 onChange={onChange}
-                placeholder={`Escribe aquí el nombre de tu Tarea(máximo ${maxLength} caracteres)`}
+                placeholder={`Escribe aquí el nombre de tu Tarea`}
             />
-            <p>Caracteres restantes: {maxLength - newTodoValue.length}</p>
             <div className="TodoForm-buttonContainer">
                 <button
                     type="button"
