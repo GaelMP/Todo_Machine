@@ -4,11 +4,15 @@ import {useLocalStorage} from "../TodoContext/UseLocalStorage";
 
 function TodoItem(props) {
 
+  const onComplete = () => {
+    props.onComplete(prevState => !prevState)
+  }
+
   return (
     <li className="TodoItem">
       <span 
       className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
-      onClick={props.onComplete}
+      onClick={onComplete}
       >
         ✔
       </span>

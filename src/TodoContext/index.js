@@ -58,7 +58,6 @@ if (
     todos[todoIndex].completed = true;
     saveTodos(newTodos)
 
-    // playSound();
     };
 
     const deleteTodos = (text) => {

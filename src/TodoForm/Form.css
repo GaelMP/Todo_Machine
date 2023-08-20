@@ -59,6 +59,8 @@ form {
     border-radius: 2px;
     border: none;
     font-family: 'Montserrat';
+
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   }
   
   .TodoForm-button--add {
@@ -73,4 +75,8 @@ form {
 
 p {
   color: black;
+}
+
+.inactive {
+  background: #2c3b61da;
 }

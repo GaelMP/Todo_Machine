@@ -8,7 +8,7 @@ function TodoCounter() {
 
   return (
     <h1 className='TodoCounter'>
-      {completedTodos === totalTodos ? "🎉Felicidades, has completado TODAS tus tareas🎉" : `Has completado ${completedTodos} de ${totalTodos} TODOs`}
+      {totalTodos === 0 ? "🤔Parece que no tienes ninguna tarea🤔" : completedTodos === totalTodos & !totalTodos <= 0 ? "🎉Felicidades, has completado TODAS tus tareas🎉" : `Has completado ${completedTodos} de ${totalTodos} TODOs`}
     </h1>
   );
 }

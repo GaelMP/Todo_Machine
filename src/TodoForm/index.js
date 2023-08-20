@@ -29,6 +29,9 @@ function TodoForm() {
         setOpenModal(false);
     }
 
+    const isButtonDisabled = newTodoValue.length < 1;
+
+
     return (
         <form onSubmit={onSubmit}>
             <label>Crea una nueva tarea aquí!</label>
@@ -47,7 +50,8 @@ function TodoForm() {
                 </button>
                 <button
                     type="submit"
-                    className="TodoForm-button TodoForm-button--add"
+                    className={`TodoForm-button TodoForm-button--add ${isButtonDisabled ? 'inactive' : ''}`}
+                    disabled={isButtonDisabled}
                 >
                     Añadir
                 </button>
