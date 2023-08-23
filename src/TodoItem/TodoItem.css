@@ -28,6 +28,8 @@
     line-height: 24px;
     font-weight: 400;
     border-radius: 4px;
+
+    transition: color 0.5s ease, text-decoration 0.5s ease, opacity 0.5s ease;
   }
   .TodoItem-p--complete {
     text-decoration: line-through;
