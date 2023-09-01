@@ -10,6 +10,7 @@
   margin-right: auto;
   margin-left: auto;
   font-size: 20px;
+  user-select: none;
 }
 
 .wheel-and-hamster {
@@ -293,6 +294,7 @@
   left: 50vw;
   transform: translate(-100%, -100%);
   transform: rotate(180deg);
+  user-select: none;
 }
 
 .arrow span {
@@ -329,6 +331,7 @@
 }
 
 .arrow_2 {
+  user-select: none;
 position: absolute;
 bottom: 30px;
 right: 12rem;
